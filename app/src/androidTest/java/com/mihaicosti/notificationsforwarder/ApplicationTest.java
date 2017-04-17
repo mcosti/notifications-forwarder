@@ -1,4 +1,4 @@
-package com.github.chagall.notificationlistenerexample;
+package com.mihaicosti.notificationsforwarder;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
