@@ -5,12 +5,13 @@
     <color name="colorAccent">#311b92</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
+    <color name="gray">#d3d3d3</color>
 
 
     <!-- Screens background color-->
     <color name="bg_screen1">#f64c73</color>
-    <color name="bg_screen2">#20d2bb</color>
-    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen2">#3395ff</color>
+    <color name="bg_screen3">#20d2bb</color>
     <color name="bg_screen4">#c873f4</color>
 
     <!-- dots inactive colors -->

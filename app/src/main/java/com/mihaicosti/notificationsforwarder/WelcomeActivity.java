@@ -3,11 +3,9 @@ package com.mihaicosti.notificationsforwarder;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,6 +22,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -70,12 +69,14 @@ public class WelcomeActivity extends AppCompatActivity {
 
 
 
+
+
         // layouts of all welcome sliders
         // add few more layouts if you want
         layouts = new int[]{
-                R.layout.welcome_slide1,
-                R.layout.welcome_slide2,
-                R.layout.welcome_slide3,
+                R.layout.intro_slide1,
+                R.layout.intro_slide2,
+                R.layout.intro_slide3,
                 R.layout.welcome_slide4};
 
         // adding bottom dots
@@ -88,16 +89,11 @@ public class WelcomeActivity extends AppCompatActivity {
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
-        final PackageManager pm = getPackageManager();
-//get a list of installed apps.
-        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        setContentView(R.layout.intro_slide1);
+        EditText testEdit = (EditText) findViewById(R.id.input_auth);
+        testEdit.setText("test");
 
-        for (ApplicationInfo packageInfo : packages) {
-            Log.d("d", "App name: " + packageInfo.loadLabel(this.getPackageManager()));
-            Log.d("d", "Installed package :" + packageInfo.packageName);
-            Log.d("d", "Source dir : " + packageInfo.sourceDir);
-            Log.d("d", "Launch Activity :" + pm.getLaunchIntentForPackage(packageInfo.packageName));
-        }
+
 
 
 
