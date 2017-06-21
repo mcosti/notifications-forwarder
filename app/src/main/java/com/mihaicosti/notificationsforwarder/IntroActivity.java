@@ -1,5 +1,6 @@
 package com.mihaicosti.notificationsforwarder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class IntroActivity extends MaterialIntroActivity {
     @Override
     public void onFinish() {
         super.onFinish();
+        startActivity(new Intent(this, MainActivity.class));
         Toast.makeText(this, "Try this library in your project! :)", Toast.LENGTH_SHORT).show();
     }
 }

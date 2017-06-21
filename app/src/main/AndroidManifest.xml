@@ -18,6 +18,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".MainActivity">
+        </activity>
+
         <service
             android:name=".NotificationListenerFwService"
             android:label="@string/service_label"
